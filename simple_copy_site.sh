@@ -20,4 +20,4 @@ mysql -u''$new_bd_name'' $new_bd_name -p''$bd_pass'' < $old_bd_name.$DT.sql
 
 rm -rf ~/$old_bd_name.$DT.sql
 
-rm -rf ~/copy_wp_script.sh
+rm -rf ~/simple_copy_site.sh
