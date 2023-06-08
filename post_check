@@ -1,0 +1,20 @@
+<form method="POST" action="test.php">
+  <label for="name">Имя:</label>
+  <input type="text" id="name" name="name"><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br>
+
+  <input type="submit" value="Отправить">
+</form>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $post_data = file_get_contents("php://input");
+    $decoded_data = json_decode($post_data, true);
+    // обработка данных...
+    echo "POST-запрос успешно обработан";
+} else {
+    echo "Ошибка: запрос должен быть POST";
+}
+?>
